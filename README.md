@@ -1,9 +1,9 @@
-SpeerCheck – Interview Scheduler
+##SpeerCheck – Interview Scheduler
 
 SpeerCheck is a live interview scheduling tool built for recruiters at Speer.
 It helps match candidates’ preferred availability with engineers’ working hours and makes scheduling interviews quick and reliable.
 
-🚀 Live Demo
+#🚀 Live Demo
 
 Deployed App on Vercel/Netlify
 
