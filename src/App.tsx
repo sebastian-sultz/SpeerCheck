@@ -72,7 +72,7 @@ export default function App() {
 
         <Calendar
   candidate={candidate}   // not forced to CANDIDATES[0]
-  engineers={ENGINEERS}
+  // engineers={ENGINEERS}
   engineerSlotMap={engineerSlotMap}
   engineerLookup={engineerLookup}
   engineerColor={engineerColor}
