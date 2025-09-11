@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Header from "./components/Header";
 import Calendar from "./components/Calendar";
 import EngineerChooserModal from "./components/EngineerChooserModal";

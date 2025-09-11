@@ -1,4 +1,3 @@
-import React from "react";
 import type { Slot } from "../types";
 import { formatTimeFromMinutes } from "../utils/availability";
 

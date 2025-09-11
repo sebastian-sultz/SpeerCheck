@@ -1,4 +1,3 @@
-import React from "react";
 
 export default function EngineerLegend({ items }: { items: { id: string; name: string; color: string }[] }) {
   return (

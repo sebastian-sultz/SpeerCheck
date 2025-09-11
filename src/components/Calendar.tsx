@@ -1,12 +1,12 @@
 // src/components/Calendar.tsx
-import React, { useMemo } from "react";
-import type { Candidate, Engineer, Slot } from "../types";
+import { useMemo } from "react";
+import type { Candidate, Slot } from "../types";
 import { generateWeekSlots, slotKey, formatTimeFromMinutes } from "../utils/availability";
 import SlotCell from "./SlotCell";
 
 export default function Calendar({
   candidate,
-  engineers,
+  
   engineerSlotMap,
   engineerLookup,
   engineerColor,
@@ -14,7 +14,7 @@ export default function Calendar({
 }: {
  candidate: Candidate | null;
 
-  engineers: Engineer[];
+ 
   engineerSlotMap: Map<string, string[]>;
   engineerLookup: Record<string, string>;
   engineerColor: Record<string, string>;

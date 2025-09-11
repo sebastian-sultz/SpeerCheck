@@ -1,4 +1,3 @@
-import React from "react";
 import type { Engineer, Candidate, Slot } from "../types";
 import { formatTimeFromMinutes, dayLabel } from "../utils/availability";
 
