@@ -1,69 +1,62 @@
-# React + TypeScript + Vite
+SpeerCheck – Interview Scheduler
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SpeerCheck is a live interview scheduling tool built for recruiters at Speer.
+It helps match candidates’ preferred availability with engineers’ working hours and makes scheduling interviews quick and reliable.
 
-Currently, two official plugins are available:
+🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Deployed App on Vercel/Netlify
 
-## Expanding the ESLint configuration
+✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📅 Weekly calendar view (Mon–Fri, 9 AM – 6 PM) with 30-min slots
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+👤 Candidate selection with preferred availability ranges
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+👨‍💻 Engineer availability overlayed on the same calendar
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🔎 Automatic calculation of overlapping slots between candidate + engineers
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+✅ One-click interview scheduling with confirmation message
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🎨 Desktop-first, clean, and recruiter-friendly UI
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🧪 Unit tests for core scheduling logic (availability calculation, overlaps, slot mapping)
+
+🛠️ Tech Stack
+
+React + TypeScript
+
+Vite for fast bundling
+
+TailwindCSS for styling
+
+Jest + ts-jest for unit tests
+
+Netlify/Vercel for deployment
+
+📂 Project Structure
+src/
+  components/       // UI components like Calendar and SlotCell
+  data/             // Sample candidate & engineer availability
+  utils/            // Core scheduling logic (availability, overlaps, slot mapping)
+  types/            // TypeScript types
+  __tests__/        // Unit tests for utils
+
+🧪 Running Tests
+# install dependencies
+npm install
+
+# run test suite
+npm run test
+
+
+The tests focus on availability logic, ensuring slot generation, overlaps, and engineer matching work as expected.
+
+🎯 Design Decisions
+
+Logic separated from UI → All scheduling logic lives in utils/availability.ts, making it testable and maintainable.
+
+Calendar-first UI → Recruiters can see candidate + engineer overlaps instantly.
+
+Unit-tested logic → Instead of testing only the UI, tests validate the real scheduling logic.
