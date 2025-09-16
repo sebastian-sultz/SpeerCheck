@@ -75,5 +75,3 @@ The test suite focuses on **availability logic**, ensuring:
 ---
 
 
-Do you also want me to make a **badges section** (like build status, license, tech logos, coverage % etc.) at the top of this README to make it look even more GitHub-ready?
-
